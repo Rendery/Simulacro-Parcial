@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-	int a=5,n=1;
-	//cout << "numero sin tilde:" << endl;
-	//cin >> a;
+	int a,n=1;
+	cout << "numero sin tilde:" << endl;
+	cin >> a;
 
 	for (int i = a;i >= 1;i--)
 	{

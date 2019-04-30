@@ -1,0 +1,55 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	int a=5,n=1;
+	//cout << "numero sin tilde:" << endl;
+	//cin >> a;
+
+	for (int i = a;i >= 1;i--)
+	{
+		for (int k = 1;k <= i;k++)
+		{
+			cout << "  ";
+		}
+		for (int p = 2*a;p >= 1;p--)
+		{
+			if (2*i<=p)
+			{
+				cout << n << " ";
+			}
+			else
+			{
+				cout << " ";
+			}
+			n++;
+		}
+		cout << endl;
+		n = 1;
+	}
+	for (int i = 2;i <= a;i++)
+	{
+		for (int k = 1;k <= i;k++)
+		{
+			cout << "  ";
+		}
+		for (int p = 2 * a;p >= 1;p--)
+		{
+			if (2 * i <= p)
+			{
+				cout << n << " ";
+			}
+			else
+			{
+				cout << " ";
+			}
+			n++;
+		}
+		cout << endl;
+		n = 1;
+	}
+
+	_getch();
+}

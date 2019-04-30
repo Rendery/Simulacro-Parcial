@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	int a,n=1;
-	cout << "numero sin tilde:" << endl;
+	cout << "ingrese numero [1-5]:" << endl;
 	cin >> a;
 
 	for (int i = a;i >= 1;i--)

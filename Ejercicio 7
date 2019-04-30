@@ -1,0 +1,113 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+using namespace std;
+
+int main()
+{
+	char tipo, or;
+	int hora, conA = 0, conD = 0, conE = 0, Extra = 0, Nacio = 0, madru = 0, mana = 0, tar = 0, no = 0;
+
+	while (tipo != 'X')
+	{
+		cout << "Ingrese tipo de noticia: " << endl;
+		cin >> tipo;
+		tipo = toupper(tipo);
+		switch (tipo)
+		{
+		case 'D':
+		{
+			conD++;
+		}
+		break;
+		case 'A':
+		{
+			conA++;
+		}
+		break;
+		case 'E':
+		{
+			conE++;
+		}
+		break;
+		}
+		if (tipo != 'X')
+		{
+			cout << "Hora de publicación: " << endl;
+			cin >> hora;
+			if ((hora >= 0) && (hora <= 23))
+			{
+				if ((hora >= 0) && (hora <= 5))
+				{
+					madru++;
+				}
+				if ((hora >= 6) && (hora <= 12))
+				{
+					mana++;
+				}
+				if ((hora >= 13) && (hora <= 17))
+				{
+					tar++;
+				}
+				if ((hora >= 18) && (hora <= 23))
+				{
+					no++;
+				}
+			}
+			cout << "Origen: " << endl;
+			cin >> or ;
+			or = toupper(or );
+			switch (or )
+			{
+			case 'N':
+			{
+				Nacio++;
+			}break;
+			case 'E':
+			{
+				Extra++;
+			}break;
+			}
+		}
+		else
+		{
+			exit;
+		}
+	}
+	cout << "Noticias de Deporte: " << conD << endl;
+	cout << "Noticias de Actualidad: " << conA << endl;
+	cout << "Noticias de Entretenimiento: " << conE << endl;
+	if ((madru >= mana)&& (madru >= tar)&& (madru >= no))
+	{
+		cout << "En la MADRUGADA se publicaron mas noticias" << endl;
+	}
+	if ((mana >= madru) && (mana >= tar) && (mana >= no))
+	{
+		cout << "En la MA"<<char(165)<<"ANA se publicaron mas noticias" << endl;
+	}
+	if ((tar >= mana) && (tar >= madru) && (tar >= no))
+	{
+		cout << "En la TARDE se publicaron mas noticias" << endl;
+	}
+	if ((no >= mana) && (no >= tar) && (no >= madru))
+	{
+		cout << "En la NOCHE se publicaron mas noticias" << endl;
+	}
+
+
+
+	
+	if (Nacio < Extra)
+	{
+		cout << "Predominan las noticias del Extranjero";
+	}else
+	if (Nacio == Extra)
+	{
+		cout << "Predominan ambas noticias";
+	}
+	else
+	{
+		cout << "Predominan las noticias Nacionales";
+	}
+	_getch();
+}

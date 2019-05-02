@@ -1,0 +1,47 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h> 
+
+using namespace std;
+
+int factorial(int numero)
+{
+	int i;
+	int fact = 1;
+	if (numero<0) fact = 0;
+	else if (numero == 0) fact = 1;
+	else 
+	{
+		for (int i = 1; i <= numero; i++) 
+		{
+			fact = fact*i;
+		}
+	}
+	return fact;
+}
+int main()
+{
+	int k;
+	double a, don, pedrito=0,cusicusa;
+	do
+	{
+	cout << "ingrese k: " << endl;
+	cin >> k;
+	} while (k > 20);
+	cout <<"ingrese a: " << endl;
+	cin >> a;
+	if (k == 1)
+	{
+		cusicusa = 1 + a;
+	}
+	else
+	{
+		for (int i = 2; i <= k; i++)
+		{
+				don = pow(a, i) / factorial(i);
+				pedrito = pedrito + don;
+		}
+	}
+	cout << (pedrito + 1 + a);
+	_getch();
+}

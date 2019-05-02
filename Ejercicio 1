@@ -1,6 +1,6 @@
 #include <iostream>
 #include <conio.h>
-#include <math.h>  // pow(2,2)
+#include <math.h>
 
 using namespace std;
 
@@ -26,6 +26,6 @@ int main()
 			pedrito = pedrito + don;
 		}
 	}
-	cout << pedrito;
+	cout << (pedrito + 1/a);
 	_getch();
 }

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>  // pow(2,2)
+
+using namespace std;
+
+// 1/a + 1/4a + 1/8a + 1/16a ...
+
+int main()
+{
+	int n;
+	double a, don, pedrito=0;
+	cin >> a;
+	cin >> n;
+	if (n == 1)
+	{
+		pedrito = 1 / a;
+	}
+	else
+	{
+		for (int i = 2; i <= n; i++)
+		{
+			don = 1 / pow(2, i) * a;
+			pedrito = pedrito + don;
+		}
+	}
+	cout << pedrito;
+	_getch();
+}

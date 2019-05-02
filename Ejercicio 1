@@ -10,7 +10,9 @@ int main()
 {
 	int n;
 	double a, don, pedrito=0;
+	cout <<"ingrese a: " << endl;
 	cin >> a;
+	cout <<"ingrese n: " << endl;
 	cin >> n;
 	if (n == 1)
 	{
